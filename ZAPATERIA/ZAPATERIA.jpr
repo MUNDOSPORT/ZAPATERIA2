@@ -142,15 +142,15 @@
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
-            <value n="id" v="Swingx-all-1.6.4.jar"/>
+            <value n="id" v="Barbecue-1.5-beta1.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Groovy-all-2.0.1.jar"/>
+            <value n="id" v="Ant-1.7.1.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Javax.persistence-3.0-prelude.jar.zip"/>
+            <value n="id" v="Antlr-2.7.5.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -158,11 +158,103 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Barbecue-1.5-beta1.jar1"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Barcode4j-2.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-anim.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-awt-util.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-bridge.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-css.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-dom.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-ext.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-gvt.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-parser.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-script.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-svg-dom.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-svggen.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-util.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-xml.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Bcel-5.2.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Bnd-2.1.0.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Bsh-2.0b4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="C3p0-0.9.2.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Castor-1.2.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-beanutils-1.8.0.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-collections-3.2.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-digester-2.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-javaflow-20060411.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-logging-1.1.1.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -175,6 +267,10 @@
          </hash>
          <hash>
             <value n="id" v="Gradle-wrapper.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Groovy-all-2.0.1.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -226,6 +322,14 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Hibernate3.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Hsqldb-1.8.0-10.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Infinispan-commons-6.0.0.Final.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -234,11 +338,47 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="IText-2.1.7.js2.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jackson-annotations-2.1.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jackson-core-2.1.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jackson-databind-2.1.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Jandex-1.1.0.Final.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Jasperreports-5.6.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jasperreports-applet-5.6.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jasperreports-fonts-5.6.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jasperreports-javaflow-5.6.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Javassist-3.18.1-GA.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jaxen-1.1.1.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -266,11 +406,59 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Jcalendar-1.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jcommon-1.0.15.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jdt-compiler-3.1.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jfreechart-1.0.12.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Jgroups-3.4.1.Final.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Jpa.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jxl-2.6.10.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Log4j-1.2.15.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Lucene-analyzers-common-4.5.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Lucene-core-4.5.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Lucene-queryparser-4.5.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Mchange-commons-java-0.2.3.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Mondrian-3.1.1.12687.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Olap4j-0.9.7.309-JS-3.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -282,35 +470,19 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Proxool-0.8.3.jar"/>
+            <value n="id" v="Png-encoder-1.5.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Rhq-pluginAnnotations-3.0.4.jar"/>
+            <value n="id" v="Poi-3.7-20101029.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Slf4j-api-1.6.1.jar"/>
+            <value n="id" v="Poi-ooxml-3.7-20101029.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Jcalendar-1.4.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Ant-1.7.1"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="JUnit 4 Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <url n="id" path="../../../../../AppData/Roaming/JDeveloper/system12.1.3.0.41.140521.1008/o.jdeveloper/jasperreport.library"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <url n="id" path="../../../../../AppData/Roaming/JDeveloper/system12.1.3.0.41.140521.1008/o.jdeveloper/jcalendar.library"/>
+            <value n="id" v="Poi-ooxml-schemas-3.7-20101029.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -318,11 +490,71 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <url n="id" path="../../../../../AppData/Roaming/JDeveloper/system12.1.3.0.41.140521.1008/o.jdeveloper/Swingx-mavensupport-1.6.4.library"/>
+            <value n="id" v="Proxool-0.8.3.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Rhino-1.7R3.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Rhq-pluginAnnotations-3.0.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Saaj-api-1.3.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Serializer.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Servlet-api-2.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Slf4j-api-1.6.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Spring-beans-2.5.5.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Spring-core-2.5.5.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
             <value n="id" v="Substance-4.3.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Swingx-all-1.6.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Velocity-1.7-dep.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Xalan-2.7.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="XercesImpl-2.10.0.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Xml-apis-ext.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Xml-apis.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Xmlbeans-2.5.0.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -330,34 +562,34 @@
          <list n="libraryDefinitions">
             <hash>
                <list n="classPath">
-                  <url protocol="jar" path="file:/lib/swingx-all-1.6.4.jar!/"/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/barbecue-1.5-beta1.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Swingx-all-1.6.4.jar"/>
-               <value n="id" v="Swingx-all-1.6.4.jar"/>
+               <value n="description" v="Barbecue-1.5-beta1.jar"/>
+               <value n="id" v="Barbecue-1.5-beta1.jar"/>
                <value n="locked" v="true"/>
             </hash>
             <hash>
                <list n="classPath">
-                  <url protocol="jar" path="file:/lib/groovy-all-2.0.1.jar!/"/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/ant-1.7.1.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Groovy-all-2.0.1.jar"/>
-               <value n="id" v="Groovy-all-2.0.1.jar"/>
+               <value n="description" v="Ant-1.7.1.jar"/>
+               <value n="id" v="Ant-1.7.1.jar"/>
                <value n="locked" v="true"/>
             </hash>
             <hash>
                <list n="classPath">
-                  <url protocol="jar" path="file:/lib/javax.persistence-3.0-prelude.jar.zip!/"/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/antlr-2.7.5.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Javax.persistence-3.0-prelude.jar.zip"/>
-               <value n="id" v="Javax.persistence-3.0-prelude.jar.zip"/>
+               <value n="description" v="Antlr-2.7.5.jar"/>
+               <value n="id" v="Antlr-2.7.5.jar"/>
                <value n="locked" v="true"/>
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/antlr-2.7.7.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/antlr-2.7.7.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Antlr-2.7.7.jar"/>
@@ -366,7 +598,151 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/bnd-2.1.0.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/barbecue-1.5-beta1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Barbecue-1.5-beta1.jar1"/>
+               <value n="id" v="Barbecue-1.5-beta1.jar1"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/barcode4j-2.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Barcode4j-2.1.jar"/>
+               <value n="id" v="Barcode4j-2.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/batik-anim.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Batik-anim.jar"/>
+               <value n="id" v="Batik-anim.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/batik-awt-util.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Batik-awt-util.jar"/>
+               <value n="id" v="Batik-awt-util.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/batik-bridge.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Batik-bridge.jar"/>
+               <value n="id" v="Batik-bridge.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/batik-css.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Batik-css.jar"/>
+               <value n="id" v="Batik-css.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/batik-dom.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Batik-dom.jar"/>
+               <value n="id" v="Batik-dom.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/batik-ext.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Batik-ext.jar"/>
+               <value n="id" v="Batik-ext.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/batik-gvt.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Batik-gvt.jar"/>
+               <value n="id" v="Batik-gvt.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/batik-parser.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Batik-parser.jar"/>
+               <value n="id" v="Batik-parser.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/batik-script.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Batik-script.jar"/>
+               <value n="id" v="Batik-script.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/batik-svg-dom.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Batik-svg-dom.jar"/>
+               <value n="id" v="Batik-svg-dom.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/batik-svggen.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Batik-svggen.jar"/>
+               <value n="id" v="Batik-svggen.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/batik-util.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Batik-util.jar"/>
+               <value n="id" v="Batik-util.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/batik-xml.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Batik-xml.jar"/>
+               <value n="id" v="Batik-xml.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/bcel-5.2.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Bcel-5.2.jar"/>
+               <value n="id" v="Bcel-5.2.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/bnd-2.1.0.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Bnd-2.1.0.jar"/>
@@ -375,7 +751,16 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/c3p0-0.9.2.1.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/bsh-2.0b4.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Bsh-2.0b4.jar"/>
+               <value n="id" v="Bsh-2.0b4.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/c3p0-0.9.2.1.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="C3p0-0.9.2.1.jar"/>
@@ -384,7 +769,61 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/dom4j-1.6.1.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/castor-1.2.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Castor-1.2.jar"/>
+               <value n="id" v="Castor-1.2.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/commons-beanutils-1.8.0.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-beanutils-1.8.0.jar"/>
+               <value n="id" v="Commons-beanutils-1.8.0.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/commons-collections-3.2.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-collections-3.2.1.jar"/>
+               <value n="id" v="Commons-collections-3.2.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/commons-digester-2.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-digester-2.1.jar"/>
+               <value n="id" v="Commons-digester-2.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/commons-javaflow-20060411.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-javaflow-20060411.jar"/>
+               <value n="id" v="Commons-javaflow-20060411.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/commons-logging-1.1.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-logging-1.1.1.jar"/>
+               <value n="id" v="Commons-logging-1.1.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/dom4j-1.6.1.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Dom4j-1.6.1.jar"/>
@@ -393,7 +832,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/ehcache-core-2.4.3.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/ehcache-core-2.4.3.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Ehcache-core-2.4.3.jar"/>
@@ -402,7 +841,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/gradle-wrapper.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/gradle-wrapper.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Gradle-wrapper.jar"/>
@@ -411,7 +850,16 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/hibernate-c3p0-4.3.6.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/groovy-all-2.0.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Groovy-all-2.0.1.jar"/>
+               <value n="id" v="Groovy-all-2.0.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/hibernate-c3p0-4.3.6.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Hibernate-c3p0-4.3.6.Final.jar"/>
@@ -420,7 +868,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/hibernate-commons-annotations-4.0.5.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/hibernate-commons-annotations-4.0.5.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Hibernate-commons-annotations-4.0.5.Final.jar"/>
@@ -429,7 +877,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/hibernate-core-4.3.6.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/hibernate-core-4.3.6.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Hibernate-core-4.3.6.Final.jar"/>
@@ -438,7 +886,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/hibernate-ehcache-4.3.6.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/hibernate-ehcache-4.3.6.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Hibernate-ehcache-4.3.6.Final.jar"/>
@@ -447,7 +895,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/hibernate-entitymanager-4.3.6.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/hibernate-entitymanager-4.3.6.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Hibernate-entitymanager-4.3.6.Final.jar"/>
@@ -456,7 +904,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/hibernate-envers-4.3.6.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/hibernate-envers-4.3.6.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Hibernate-envers-4.3.6.Final.jar"/>
@@ -465,7 +913,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/hibernate-infinispan-4.3.6.Final-tests.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/hibernate-infinispan-4.3.6.Final-tests.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Hibernate-infinispan-4.3.6.Final-tests.jar"/>
@@ -474,7 +922,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/hibernate-infinispan-4.3.6.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/hibernate-infinispan-4.3.6.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Hibernate-infinispan-4.3.6.Final.jar"/>
@@ -483,7 +931,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/hibernate-jpa-2.1-api-1.0.0.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/hibernate-jpa-2.1-api-1.0.0.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
@@ -492,7 +940,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/hibernate-jpamodelgen-4.3.6.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/hibernate-jpamodelgen-4.3.6.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Hibernate-jpamodelgen-4.3.6.Final.jar"/>
@@ -501,7 +949,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/hibernate-osgi-4.3.6.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/hibernate-osgi-4.3.6.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Hibernate-osgi-4.3.6.Final.jar"/>
@@ -510,7 +958,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/hibernate-proxool-4.3.6.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/hibernate-proxool-4.3.6.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Hibernate-proxool-4.3.6.Final.jar"/>
@@ -519,7 +967,25 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/infinispan-commons-6.0.0.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/hibernate3.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Hibernate3.jar"/>
+               <value n="id" v="Hibernate3.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/hsqldb-1.8.0-10.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Hsqldb-1.8.0-10.jar"/>
+               <value n="id" v="Hsqldb-1.8.0-10.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/infinispan-commons-6.0.0.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Infinispan-commons-6.0.0.Final.jar"/>
@@ -528,7 +994,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/infinispan-core-6.0.0.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/infinispan-core-6.0.0.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Infinispan-core-6.0.0.Final.jar"/>
@@ -537,7 +1003,43 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/jandex-1.1.0.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/iText-2.1.7.js2.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="IText-2.1.7.js2.jar"/>
+               <value n="id" v="IText-2.1.7.js2.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jackson-annotations-2.1.4.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jackson-annotations-2.1.4.jar"/>
+               <value n="id" v="Jackson-annotations-2.1.4.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jackson-core-2.1.4.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jackson-core-2.1.4.jar"/>
+               <value n="id" v="Jackson-core-2.1.4.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jackson-databind-2.1.4.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jackson-databind-2.1.4.jar"/>
+               <value n="id" v="Jackson-databind-2.1.4.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jandex-1.1.0.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Jandex-1.1.0.Final.jar"/>
@@ -546,7 +1048,43 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/javassist-3.18.1-GA.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jasperreports-5.6.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jasperreports-5.6.1.jar"/>
+               <value n="id" v="Jasperreports-5.6.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jasperreports-applet-5.6.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jasperreports-applet-5.6.1.jar"/>
+               <value n="id" v="Jasperreports-applet-5.6.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jasperreports-fonts-5.6.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jasperreports-fonts-5.6.1.jar"/>
+               <value n="id" v="Jasperreports-fonts-5.6.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jasperreports-javaflow-5.6.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jasperreports-javaflow-5.6.1.jar"/>
+               <value n="id" v="Jasperreports-javaflow-5.6.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/javassist-3.18.1-GA.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Javassist-3.18.1-GA.jar"/>
@@ -555,7 +1093,16 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/jboss-logging-3.1.3.GA.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jaxen-1.1.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jaxen-1.1.1.jar"/>
+               <value n="id" v="Jaxen-1.1.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jboss-logging-3.1.3.GA.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Jboss-logging-3.1.3.GA.jar"/>
@@ -564,7 +1111,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/jboss-logging-annotations-1.2.0.Beta1.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jboss-logging-annotations-1.2.0.Beta1.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Jboss-logging-annotations-1.2.0.Beta1.jar"/>
@@ -573,7 +1120,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/jboss-marshalling-1.3.18.GA.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jboss-marshalling-1.3.18.GA.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Jboss-marshalling-1.3.18.GA.jar"/>
@@ -582,7 +1129,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/jboss-marshalling-river-1.3.18.GA.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jboss-marshalling-river-1.3.18.GA.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Jboss-marshalling-river-1.3.18.GA.jar"/>
@@ -591,7 +1138,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/jboss-transaction-api_1.1_spec-1.0.1.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jboss-transaction-api_1.1_spec-1.0.1.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Jboss-transaction-api_1.1_spec-1.0.1.Final.jar"/>
@@ -600,7 +1147,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/jboss-transaction-api_1.2_spec-1.0.0.Final.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jboss-transaction-api_1.2_spec-1.0.0.Final.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
@@ -609,70 +1156,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../hibernate/jgroups-3.4.1.Final.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Jgroups-3.4.1.Final.jar"/>
-               <value n="id" v="Jgroups-3.4.1.Final.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-            <hash>
-               <list n="classPath">
-                  <url path="../hibernate/mchange-commons-java-0.2.3.4.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Mchange-commons-java-0.2.3.4.jar"/>
-               <value n="id" v="Mchange-commons-java-0.2.3.4.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-            <hash>
-               <list n="classPath">
-                  <url path="../hibernate/org.osgi.compendium-4.3.1.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Org.osgi.compendium-4.3.1.jar"/>
-               <value n="id" v="Org.osgi.compendium-4.3.1.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-            <hash>
-               <list n="classPath">
-                  <url path="../hibernate/org.osgi.core-4.3.1.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Org.osgi.core-4.3.1.jar"/>
-               <value n="id" v="Org.osgi.core-4.3.1.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-            <hash>
-               <list n="classPath">
-                  <url path="../hibernate/proxool-0.8.3.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Proxool-0.8.3.jar"/>
-               <value n="id" v="Proxool-0.8.3.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-            <hash>
-               <list n="classPath">
-                  <url path="../hibernate/rhq-pluginAnnotations-3.0.4.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Rhq-pluginAnnotations-3.0.4.jar"/>
-               <value n="id" v="Rhq-pluginAnnotations-3.0.4.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-            <hash>
-               <list n="classPath">
-                  <url path="../hibernate/slf4j-api-1.6.1.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Slf4j-api-1.6.1.jar"/>
-               <value n="id" v="Slf4j-api-1.6.1.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-            <hash>
-               <list n="classPath">
-                  <url protocol="jar" path="file:/lib/jcalendar-1.4.jar!/"/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jcalendar-1.4.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Jcalendar-1.4.jar"/>
@@ -681,78 +1165,178 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url protocol="jar" path="file:/caca/lib/ant-1.7.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/antlr-2.7.5.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/barbecue-1.5-beta1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/barcode4j-2.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/batik-anim.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/batik-awt-util.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/batik-bridge.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/batik-css.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/batik-dom.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/batik-ext.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/batik-gvt.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/batik-parser.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/batik-script.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/batik-svg-dom.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/batik-svggen.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/batik-util.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/batik-xml.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/bcel-5.2.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/bsh-2.0b4.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/castor-1.2.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/commons-beanutils-1.8.0.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/commons-collections-3.2.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/commons-digester-2.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/commons-javaflow-20060411.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/commons-logging-1.1.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/dom4j-1.6.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/groovy-all-2.0.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/hibernate3.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/hsqldb-1.8.0-10.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/iText-2.1.7.js2.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/jackson-annotations-2.1.4.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/jackson-core-2.1.4.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/jackson-databind-2.1.4.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/jasperreports-5.6.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/jasperreports-applet-5.6.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/jasperreports-fonts-5.6.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/jasperreports-javaflow-5.6.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/jaxen-1.1.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/jcommon-1.0.15.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/jdt-compiler-3.1.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/jfreechart-1.0.12.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/jpa.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/jxl-2.6.10.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/log4j-1.2.15.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/lucene-analyzers-common-4.5.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/lucene-core-4.5.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/lucene-queryparser-4.5.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/mondrian-3.1.1.12687.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/olap4j-0.9.7.309-JS-3.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/png-encoder-1.5.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/poi-3.7-20101029.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/poi-ooxml-3.7-20101029.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/poi-ooxml-schemas-3.7-20101029.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/rhino-1.7R3.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/saaj-api-1.3.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/serializer.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/servlet-api-2.4.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/spring-beans-2.5.5.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/spring-core-2.5.5.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/velocity-1.7-dep.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/xalan-2.7.1.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/xercesImpl-2.10.0.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/xml-apis-ext.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/xml-apis.jar!/"/>
-                  <url protocol="jar" path="file:/caca/lib/xmlbeans-2.5.0.jar!/"/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jcommon-1.0.15.jar" jar-entry=""/>
                </list>
-               <value n="description" v="Ant-1.7.1"/>
-               <value n="id" v="Ant-1.7.1"/>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jcommon-1.0.15.jar"/>
+               <value n="id" v="Jcommon-1.0.15.jar"/>
+               <value n="locked" v="true"/>
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../../../lib/postgresql-9.3-1102.jdbc41.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jdt-compiler-3.1.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jdt-compiler-3.1.1.jar"/>
+               <value n="id" v="Jdt-compiler-3.1.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jfreechart-1.0.12.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jfreechart-1.0.12.jar"/>
+               <value n="id" v="Jfreechart-1.0.12.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jgroups-3.4.1.Final.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jgroups-3.4.1.Final.jar"/>
+               <value n="id" v="Jgroups-3.4.1.Final.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jpa.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jpa.jar"/>
+               <value n="id" v="Jpa.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/jxl-2.6.10.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jxl-2.6.10.jar"/>
+               <value n="id" v="Jxl-2.6.10.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/log4j-1.2.15.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Log4j-1.2.15.jar"/>
+               <value n="id" v="Log4j-1.2.15.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/lucene-analyzers-common-4.5.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Lucene-analyzers-common-4.5.1.jar"/>
+               <value n="id" v="Lucene-analyzers-common-4.5.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/lucene-core-4.5.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Lucene-core-4.5.1.jar"/>
+               <value n="id" v="Lucene-core-4.5.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/lucene-queryparser-4.5.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Lucene-queryparser-4.5.1.jar"/>
+               <value n="id" v="Lucene-queryparser-4.5.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/mchange-commons-java-0.2.3.4.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Mchange-commons-java-0.2.3.4.jar"/>
+               <value n="id" v="Mchange-commons-java-0.2.3.4.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/mondrian-3.1.1.12687.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Mondrian-3.1.1.12687.jar"/>
+               <value n="id" v="Mondrian-3.1.1.12687.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/olap4j-0.9.7.309-JS-3.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Olap4j-0.9.7.309-JS-3.jar"/>
+               <value n="id" v="Olap4j-0.9.7.309-JS-3.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/org.osgi.compendium-4.3.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Org.osgi.compendium-4.3.1.jar"/>
+               <value n="id" v="Org.osgi.compendium-4.3.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/org.osgi.core-4.3.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Org.osgi.core-4.3.1.jar"/>
+               <value n="id" v="Org.osgi.core-4.3.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/png-encoder-1.5.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Png-encoder-1.5.jar"/>
+               <value n="id" v="Png-encoder-1.5.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/poi-3.7-20101029.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Poi-3.7-20101029.jar"/>
+               <value n="id" v="Poi-3.7-20101029.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/poi-ooxml-3.7-20101029.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Poi-ooxml-3.7-20101029.jar"/>
+               <value n="id" v="Poi-ooxml-3.7-20101029.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/poi-ooxml-schemas-3.7-20101029.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Poi-ooxml-schemas-3.7-20101029.jar"/>
+               <value n="id" v="Poi-ooxml-schemas-3.7-20101029.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/postgresql-9.3-1102.jdbc41.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Postgresql-9.3-1102.jdbc41.jar"/>
@@ -761,26 +1345,170 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../../../../../Downloads/substance-4.3.jar" jar-entry=""/>
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/proxool-0.8.3.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Proxool-0.8.3.jar"/>
+               <value n="id" v="Proxool-0.8.3.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/rhino-1.7R3.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Rhino-1.7R3.jar"/>
+               <value n="id" v="Rhino-1.7R3.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/rhq-pluginAnnotations-3.0.4.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Rhq-pluginAnnotations-3.0.4.jar"/>
+               <value n="id" v="Rhq-pluginAnnotations-3.0.4.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/saaj-api-1.3.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Saaj-api-1.3.jar"/>
+               <value n="id" v="Saaj-api-1.3.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/serializer.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Serializer.jar"/>
+               <value n="id" v="Serializer.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/servlet-api-2.4.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Servlet-api-2.4.jar"/>
+               <value n="id" v="Servlet-api-2.4.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/slf4j-api-1.6.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Slf4j-api-1.6.1.jar"/>
+               <value n="id" v="Slf4j-api-1.6.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/spring-beans-2.5.5.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Spring-beans-2.5.5.jar"/>
+               <value n="id" v="Spring-beans-2.5.5.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/spring-core-2.5.5.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Spring-core-2.5.5.jar"/>
+               <value n="id" v="Spring-core-2.5.5.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/substance-4.3.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Substance-4.3.jar"/>
                <value n="id" v="Substance-4.3.jar"/>
                <value n="locked" v="true"/>
             </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/swingx-all-1.6.4.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Swingx-all-1.6.4.jar"/>
+               <value n="id" v="Swingx-all-1.6.4.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/velocity-1.7-dep.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Velocity-1.7-dep.jar"/>
+               <value n="id" v="Velocity-1.7-dep.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/xalan-2.7.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Xalan-2.7.1.jar"/>
+               <value n="id" v="Xalan-2.7.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/xercesImpl-2.10.0.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="XercesImpl-2.10.0.jar"/>
+               <value n="id" v="XercesImpl-2.10.0.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/xml-apis-ext.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Xml-apis-ext.jar"/>
+               <value n="id" v="Xml-apis-ext.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/xml-apis.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Xml-apis.jar"/>
+               <value n="id" v="Xml-apis.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../Users/Acer/Dropbox/jdeveloper (1)/librerias/xmlbeans-2.5.0.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Xmlbeans-2.5.0.jar"/>
+               <value n="id" v="Xmlbeans-2.5.0.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
          </list>
       </hash>
       <list n="libraryReferences">
          <hash>
-            <value n="id" v="Swingx-all-1.6.4.jar"/>
+            <value n="id" v="Barbecue-1.5-beta1.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Groovy-all-2.0.1.jar"/>
+            <value n="id" v="Ant-1.7.1.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Javax.persistence-3.0-prelude.jar.zip"/>
+            <value n="id" v="Antlr-2.7.5.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -788,11 +1516,103 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Barbecue-1.5-beta1.jar1"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Barcode4j-2.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-anim.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-awt-util.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-bridge.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-css.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-dom.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-ext.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-gvt.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-parser.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-script.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-svg-dom.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-svggen.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-util.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Batik-xml.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Bcel-5.2.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Bnd-2.1.0.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Bsh-2.0b4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="C3p0-0.9.2.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Castor-1.2.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-beanutils-1.8.0.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-collections-3.2.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-digester-2.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-javaflow-20060411.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-logging-1.1.1.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -805,6 +1625,10 @@
          </hash>
          <hash>
             <value n="id" v="Gradle-wrapper.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Groovy-all-2.0.1.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -856,6 +1680,14 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Hibernate3.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Hsqldb-1.8.0-10.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Infinispan-commons-6.0.0.Final.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -864,11 +1696,47 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="IText-2.1.7.js2.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jackson-annotations-2.1.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jackson-core-2.1.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jackson-databind-2.1.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Jandex-1.1.0.Final.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Jasperreports-5.6.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jasperreports-applet-5.6.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jasperreports-fonts-5.6.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jasperreports-javaflow-5.6.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Javassist-3.18.1-GA.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jaxen-1.1.1.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -896,11 +1764,59 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Jcalendar-1.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jcommon-1.0.15.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jdt-compiler-3.1.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jfreechart-1.0.12.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Jgroups-3.4.1.Final.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Jpa.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jxl-2.6.10.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Log4j-1.2.15.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Lucene-analyzers-common-4.5.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Lucene-core-4.5.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Lucene-queryparser-4.5.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Mchange-commons-java-0.2.3.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Mondrian-3.1.1.12687.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Olap4j-0.9.7.309-JS-3.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -912,35 +1828,19 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Proxool-0.8.3.jar"/>
+            <value n="id" v="Png-encoder-1.5.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Rhq-pluginAnnotations-3.0.4.jar"/>
+            <value n="id" v="Poi-3.7-20101029.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Slf4j-api-1.6.1.jar"/>
+            <value n="id" v="Poi-ooxml-3.7-20101029.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Jcalendar-1.4.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Ant-1.7.1"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="JUnit 4 Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <url n="id" path="../../../../../AppData/Roaming/JDeveloper/system12.1.3.0.41.140521.1008/o.jdeveloper/jasperreport.library"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <url n="id" path="../../../../../AppData/Roaming/JDeveloper/system12.1.3.0.41.140521.1008/o.jdeveloper/jcalendar.library"/>
+            <value n="id" v="Poi-ooxml-schemas-3.7-20101029.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -948,11 +1848,71 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <url n="id" path="../../../../../AppData/Roaming/JDeveloper/system12.1.3.0.41.140521.1008/o.jdeveloper/Swingx-mavensupport-1.6.4.library"/>
+            <value n="id" v="Proxool-0.8.3.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Rhino-1.7R3.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Rhq-pluginAnnotations-3.0.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Saaj-api-1.3.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Serializer.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Servlet-api-2.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Slf4j-api-1.6.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Spring-beans-2.5.5.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Spring-core-2.5.5.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
             <value n="id" v="Substance-4.3.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Swingx-all-1.6.4.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Velocity-1.7-dep.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Xalan-2.7.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="XercesImpl-2.10.0.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Xml-apis-ext.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Xml-apis.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Xmlbeans-2.5.0.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
