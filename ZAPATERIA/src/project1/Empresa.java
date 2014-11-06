@@ -18,6 +18,8 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Observable;
 
@@ -133,6 +135,36 @@ public class Empresa extends Observable {
     private Map<Integer, Auditoria> auditorias;
 
     /**
+     * @associates <{project1.Auditoria}>
+     */
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Map<Integer, Cliente> clientes;
+
+    /**
+     * @associates <{project1.Auditoria}>
+     */
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Ciudad> ciudades;
+
+    /**
+     * @associates <{project1.Auditoria}>
+     */
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Domicilio> domicilios;
+
+    /**
+     * @associates <{project1.Auditoria}>
+     */
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Provincia> provincias;
+
+    /**
+     * @associates <{project1.Auditoria}>
+     */
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Pais> paises;
+
+    /**
      * @associates <{project1.Usuario}>
      */
     /*   @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -155,6 +187,12 @@ public class Empresa extends Observable {
         this.tiposPagos = new HashMap();
         this.ventas = new HashMap();
         this.auditorias = new HashMap();
+        this.domicilios = new LinkedList<Domicilio>();
+        this.paises = new LinkedList<Pais>();
+        this.provincias = new LinkedList<Provincia>();
+        this.ciudades = new LinkedList<Ciudad>();
+        this.clientes = new HashMap();
+
         //this.persistencia = new Persistencia();
 
     }
@@ -366,6 +404,47 @@ public class Empresa extends Observable {
 
     public Map<Integer, Venta> getVentas() {
         return ventas;
+    }
+
+    public void setClientes(Map<Integer, Cliente> clientes) {
+        this.clientes = clientes;
+    }
+
+    public Map<Integer, Cliente> getClientes() {
+        return clientes;
+    }
+
+
+    public void setCiudades(List<Ciudad> ciudades) {
+        this.ciudades = ciudades;
+    }
+
+    public List<Ciudad> getCiudades() {
+        return ciudades;
+    }
+
+    public void setDomicilios(List<Domicilio> domicilios) {
+        this.domicilios = domicilios;
+    }
+
+    public List<Domicilio> getDomicilios() {
+        return domicilios;
+    }
+
+    public void setProvincias(List<Provincia> provincias) {
+        this.provincias = provincias;
+    }
+
+    public List<Provincia> getProvincias() {
+        return provincias;
+    }
+
+    public void setPaises(List<Pais> paises) {
+        this.paises = paises;
+    }
+
+    public List<Pais> getPaises() {
+        return paises;
     }
 
     //------------------------Metodos---------------------
@@ -882,7 +961,8 @@ public class Empresa extends Observable {
     public int agregarVenta(Empleado unEmpleado, Empleado unUsuario, double total, Calendar fechaVenta, String nombreCliente, String domicilioCliente,
                             String numeroDocCliente) throws Exception {
         // if (!this.categorias.containsKey(nombre)) {
-        this.generarAuditoria("ALTA", "VENTA", unEmpleado.getApellido() + "/ " + unEmpleado.getNombreEmpleado() + "/ " + nombreCliente  + "/ " + total , "", GuiIngresar.getUsuario());
+        this.generarAuditoria("ALTA", "VENTA", unEmpleado.getApellido() + "/ " + unEmpleado.getNombreEmpleado() + "/ " + nombreCliente + "/ " + total, "",
+                              GuiIngresar.getUsuario());
         Venta nuevaVenta = new Venta(unEmpleado, unUsuario, total, fechaVenta, nombreCliente, domicilioCliente, numeroDocCliente);
         int ret = nuevaVenta.getCodVenta();
         this.ventas.put(nuevaVenta.getCodVenta(), nuevaVenta);
@@ -1214,10 +1294,219 @@ public class Empresa extends Observable {
         }
         this.setFechaUltimo(Calendar.getInstance());
     }
+
+    public void agregarCliente(String nombre, String doc, String dom, String tel, String apellido) {
+        Cliente unCliente = new Cliente(nombre, doc, dom, tel, apellido);
+        clientes.put(unCliente.getNumeroCliente(), unCliente);
+    }
+
+    public void modificarCliente(Cliente unCliente, String nombre, String doc, String dom, String tel, String apellido) {
+        unCliente.setApellido(apellido);
+        unCliente.setDomEmpleado(dom);
+        unCliente.setNombreEmpleado(nombre);
+        unCliente.setNroDocEmppleado(doc);
+        unCliente.setTelEmpleado(tel);
+    }
+
+    public Domicilio obtenerDireccion(Pais unPais, Provincia unaProvincia, Ciudad unaLocalidad, String unDomicilio) {
+        List<Domicilio> d = this.getDomicilios();
+        Domicilio retornar = null;
+        for (Domicilio unaDir : d) {
+            if (unaDir.getPais().equals(unPais) && unaDir.getProvincia().equals(unaProvincia) && unaDir.getDomicilio().equals(unaLocalidad) &&
+                unaDir.getDomicilio().toUpperCase().trim().equals(unDomicilio.toUpperCase().trim())) {
+                retornar = unaDir;
+                break;
+            }
+        }
+        return retornar;
+    }
+
+    public List<Domicilio> seUtilizaLocalidad(Ciudad unaLocalidad) {
+        List<Domicilio> retornar = new LinkedList<Domicilio>();
+        for (Domicilio unadir : this.getDomicilios()) {
+            if (unadir.getUnaCiudad().equals(unaLocalidad)) {
+                retornar.add(unadir);
+            }
+        }
+        return retornar;
+    }
+
+    public boolean utilizaLocalidad(String nombreLocalidad) {
+        boolean utiliza = false;
+        List<Domicilio> d = this.getDomicilios();
+        for (Domicilio unaDir : d) {
+            if (unaDir.getUnaCiudad().getNombre().equals(nombreLocalidad)) {
+                utiliza = true;
+            }
+        }
+        return utiliza;
+    }
+
+    public Ciudad altaLocalidad(Pais unPais, Provincia unaProvincia, String nombreLocalidad) throws Exception {
+        Ciudad unaLocalidad = unPais.altaLocalidad(unaProvincia, nombreLocalidad);
+        this.ciudades.add(unaLocalidad);
+        Empresa.persistencia.update(this);
+        Empresa.persistencia.update(unPais);
+        setChanged();
+        notifyObservers();
+
+        return unaLocalidad;
+    }
+
+    public void bajaLocalidad(Pais unPais, Provincia unaProvincia, Ciudad unaLocalidad) throws Exception {
+        if (utilizaLocalidad(unaLocalidad.getNombre())) {
+            throw new Exception("La localidad: " + unaLocalidad.getNombre() + " no puede ser eliminada");
+        } else {
+            unPais.bajaCiudad(unaProvincia, unaLocalidad);
+            Empresa.persistencia.update(this);
+            Empresa.persistencia.update(unPais);
+            setChanged();
+            notifyObservers();
+        }
+
+    }
+
+    public void modificarLocalidad(Pais unPais, Provincia unaProvincia, Ciudad unaLocalidad, String nombreLocalidad) throws Exception {
+
+        Ciudad nuevaLocalidad = unPais.modificarLocalidad(unaProvincia, unaLocalidad, nombreLocalidad);
+
+        List<Domicilio> aModificar = seUtilizaLocalidad(unaLocalidad);
+        if (!aModificar.isEmpty()) {
+            for (Domicilio unaDir : aModificar) {
+                unaDir.setUnaCiudad(nuevaLocalidad);
+                Empresa.persistencia.update(this);
+                Empresa.persistencia.update(unPais);
+                setChanged();
+                notifyObservers();
+            }
+        }
+
+
+    }
+
+    public Domicilio altaDireccion(Pais unPais, Provincia unaProvincia, Ciudad unaLocalidad, String unDomicilio) throws Exception {
+        Domicilio unaDireccion = obtenerDireccion(unPais, unaProvincia, unaLocalidad, unDomicilio);
+        if (unaDireccion != null) {
+            return unaDireccion;
+        } else {
+            unaDireccion = new Domicilio(unPais, unaProvincia, unaLocalidad, unDomicilio);
+            this.domicilios.add(unaDireccion);
+            Empresa.persistencia.update(this);
+            return unaDireccion;
+        }
+    }
+    // </editor-fold>
+    // <editor-fold defaultstate="collapsed" desc=" ABM de Provincia ">
+
+    public boolean utilizaProvincia(String nombreProvincia) {
+        boolean utiliza = false;
+        List<Domicilio> d = this.getDomicilios();
+        for (Domicilio unaDireccion : d) {
+            if (unaDireccion.getProvincia().getNombre().equals(nombreProvincia)) {
+                utiliza = true;
+            }
+        }
+        return utiliza;
+    }
+
+    public Provincia altaProvincia(Pais unPais, String nombreProvincia) throws Exception {
+        Provincia unaProvincia = unPais.altaProvincia(nombreProvincia);
+        this.provincias.add(unaProvincia);
+        this.setChanged();
+        this.notifyObservers();
+        return unaProvincia;
+    }
+
+    public void bajaProvincia(Pais unPais, Provincia unaProvincia) throws Exception {
+        if (unPais.existeProvincia(unaProvincia)) {
+            if (!utilizaProvincia(unaProvincia.getNombre())) {
+                this.provincias.remove(unaProvincia);
+                unPais.bajaProvincia(unaProvincia);
+                this.setChanged();
+                this.notifyObservers();
+
+
+            } else {
+                throw new Exception("La provincia seleccionada esta siendo utilizada en otra instancia por lo que no puede ser eliminada");
+            }
+        }
+    }
+
+    public void modificarProvincia(Pais unPais, Provincia unaProvincia, String nombreProvincia) throws Exception {
+        unPais.modificarProvincia(unaProvincia, nombreProvincia);
+        this.setChanged();
+        this.notifyObservers();
+    }
+
+    // </editor-fold>
+    // <editor-fold defaultstate="collapsed" desc=" ABM de Pais ">
+    public boolean utilizaPais(String nombrePais) {
+        boolean utiliza = false;
+        List<Domicilio> d = this.getDomicilios();
+        for (Domicilio unDomicilio : d) {
+            if (unDomicilio.getPais().getNombre().toUpperCase().equals(nombrePais.toUpperCase())) {
+                utiliza = true;
+            }
+        }
+        return utiliza;
+    }
+
+    public boolean existePais(Pais unPais) {
+        boolean existe = false;
+
+        for (Pais el : this.getPaises()) {
+            if (unPais.equals(el)) {
+                existe = true;
+            }
+        }
+        return existe;
+    }
+
+
+    public Pais obtenerPais(String nombrePais) {
+        Pais devolver = null;
+        if (!this.getPaises().isEmpty()) {
+            for (Pais unPais : this.getPaises()) {
+                if (unPais.getNombre().toUpperCase().equals(nombrePais.toUpperCase())) {
+                    devolver = unPais;
+                    break;
+                }
+            }
+        }
+        return devolver;
+    }
+
+
+    public void altaPais(String nombrePais) throws Exception {
+        nombrePais = nombrePais.trim();
+        if (obtenerPais(nombrePais) != null) {
+            throw new Exception("El País: " + nombrePais + " ya existe");
+        } else {
+            Pais unPais = new Pais(nombrePais);
+            this.paises.add(unPais);
+            Empresa.persistencia.update(this);
+            setChanged();
+            notifyObservers(unPais);
+        }
+    }
+
+
+    public void bajaPais(Pais unPais) throws Exception {
+        if (existePais(unPais)) {
+            if (!utilizaPais(unPais.getNombre())) {
+                this.paises.remove(unPais);
+                Empresa.persistencia.update(this);
+            } else {
+                throw new Exception("El País " + unPais.getNombre() + " no puede ser eliminado");
+            }
+        }
+    }
+
+
+    public void modificaPais(Pais unPais, String nombrePais) throws Exception {
+        if (existePais(unPais)) {
+            unPais.setNombre(nombrePais);
+            Empresa.persistencia.update(this);
+        }
+    }
 }
-    //busqeudas insertar
-
-
-
-
-
