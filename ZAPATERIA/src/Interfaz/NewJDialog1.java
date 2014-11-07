@@ -401,6 +401,8 @@ public class NewJDialog1 extends javax.swing.JDialog {
             Ciudad unaCiu = (Ciudad) unObj;
             boolean exists = false;
             for (int index = 0; index < cmbProvincia.getItemCount() && !exists; index++) {
+                if (cmbPais.getItemCount() < 0)
+                    cmbPais.addItem(unaCiu.getProvincia());
                 if (unaCiu.getProvincia().equals(cmbProvincia.getItemAt(index))) {
                     exists = true;
                 }
@@ -410,6 +412,7 @@ public class NewJDialog1 extends javax.swing.JDialog {
             }
         }
     }
+
 
     public void actualizarPais() {
         for (Object unObj : unaEmpresa.getCiudades().toArray()) {
