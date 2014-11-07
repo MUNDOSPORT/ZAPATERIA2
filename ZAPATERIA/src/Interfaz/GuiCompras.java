@@ -250,7 +250,7 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
         tblVenta.getColumnModel().getColumn(5).setHeaderValue("Precio");
         tblVenta.getColumnModel().getColumn(6).setHeaderValue("Total");
 
-        panel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Articulo", 0, 0, null, new java.awt.Color(0, 0, 0)));
+        panel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Articulo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, new java.awt.Color(0, 0, 0)));
 
         lblCodBarra.setText("Codigo de Barra*");
 
@@ -457,9 +457,9 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(lblTotal1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblTotal1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
                         .addGap(36, 36, 36)
                         .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnCancelar)
@@ -566,7 +566,7 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Total");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Descuento sobre el total", 0, 0, null, new java.awt.Color(0, 0, 0)));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Descuento sobre el total", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, new java.awt.Color(0, 0, 0)));
 
         jLabel2.setText("Tipod de descuento");
 
@@ -834,7 +834,7 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
     }//GEN-LAST:event_txtPrecioKeyTyped
 
     private void txtPrecioFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPrecioFocusLost
-        lblTotal1.setText(String.valueOf(Double.parseDouble(txtPrecio.getText()) - Double.parseDouble(txtMonto1.getText())));
+        //lblTotal1.setText(String.valueOf(Double.parseDouble(txtPrecio.getText()) - Double.parseDouble(txtMonto1.getText())));
     }//GEN-LAST:event_txtPrecioFocusLost
 
     private void txtPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrecioActionPerformed
@@ -1040,8 +1040,8 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
                     txtCantidad.setText("");
                     stock = unArt.getStock();
                     jButton1.setEnabled(false);
-                    txtMonto1.setText("0.0");
-                    lblTotal1.setText(String.valueOf(Double.parseDouble(txtPrecio.getText()) - Double.parseDouble(txtMonto1.getText())));
+                   // txtMonto1.setText("0.0");
+                   // lblTotal1.setText(String.valueOf(Double.parseDouble(txtPrecio.getText()) - Double.parseDouble(txtMonto1.getText())));
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "no existe articulo.");

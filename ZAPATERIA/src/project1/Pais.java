@@ -96,8 +96,8 @@ public class Pais {
         }
     }
 
-    public Ciudad altaLocalidad(Provincia unaProvincia, String nombreLocalidad) throws Exception {
-        Ciudad unaCiudad = unaProvincia.altaCiudad(nombreLocalidad);
+    public Ciudad altaLocalidad(Provincia unaProvincia, String nombreLocalidad, int CP) throws Exception {
+        Ciudad unaCiudad = unaProvincia.altaCiudad(nombreLocalidad, CP);
         return unaCiudad;
     }
 

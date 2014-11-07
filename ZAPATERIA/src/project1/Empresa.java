@@ -138,7 +138,7 @@ public class Empresa extends Observable {
      * @associates <{project1.Auditoria}>
      */
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Map<Integer, Cliente> clientes;
+    private Map<String, Cliente> clientes;
 
     /**
      * @associates <{project1.Auditoria}>
@@ -406,11 +406,11 @@ public class Empresa extends Observable {
         return ventas;
     }
 
-    public void setClientes(Map<Integer, Cliente> clientes) {
+    public void setClientes(Map<String, Cliente> clientes) {
         this.clientes = clientes;
     }
 
-    public Map<Integer, Cliente> getClientes() {
+    public Map<String, Cliente> getClientes() {
         return clientes;
     }
 
@@ -1297,7 +1297,7 @@ public class Empresa extends Observable {
 
     public void agregarCliente(String nombre, String doc, String dom, String tel, String apellido) {
         Cliente unCliente = new Cliente(nombre, doc, dom, tel, apellido);
-        clientes.put(unCliente.getNumeroCliente(), unCliente);
+        clientes.put(doc ,unCliente);
     }
 
     public void modificarCliente(Cliente unCliente, String nombre, String doc, String dom, String tel, String apellido) {
@@ -1342,8 +1342,8 @@ public class Empresa extends Observable {
         return utiliza;
     }
 
-    public Ciudad altaLocalidad(Pais unPais, Provincia unaProvincia, String nombreLocalidad) throws Exception {
-        Ciudad unaLocalidad = unPais.altaLocalidad(unaProvincia, nombreLocalidad);
+    public Ciudad altaLocalidad(Pais unPais, Provincia unaProvincia, String nombreLocalidad, int CP) throws Exception {
+        Ciudad unaLocalidad = unPais.altaLocalidad(unaProvincia, nombreLocalidad, CP);
         this.ciudades.add(unaLocalidad);
         Empresa.persistencia.update(this);
         Empresa.persistencia.update(unPais);
@@ -1477,17 +1477,17 @@ public class Empresa extends Observable {
     }
 
 
-    public void altaPais(String nombrePais) throws Exception {
+    public Pais altaPais(String nombrePais) throws Exception {
         nombrePais = nombrePais.trim();
         if (obtenerPais(nombrePais) != null) {
             throw new Exception("El País: " + nombrePais + " ya existe");
-        } else {
-            Pais unPais = new Pais(nombrePais);
-            this.paises.add(unPais);
-            Empresa.persistencia.update(this);
-            setChanged();
-            notifyObservers(unPais);
         }
+        Pais unPais = new Pais(nombrePais);
+        this.paises.add(unPais);
+        Empresa.persistencia.update(this);
+        setChanged();
+        notifyObservers(unPais);
+        return unPais;
     }
 
 

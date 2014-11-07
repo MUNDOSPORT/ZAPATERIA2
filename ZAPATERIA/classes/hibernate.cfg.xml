@@ -4,7 +4,7 @@
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.password">1234</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/ZAPATERIA</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.default_schema">public</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
@@ -35,5 +35,10 @@
         <mapping class="project1.Venta"/>
         <mapping class="project1.Articulo"/>
         <mapping class="project1.Auditoria"/>
+        <mapping class="project1.Pais"/>
+        <mapping class="project1.Provincia"/>
+        <mapping class="project1.Ciudad"/>
+        <mapping class="project1.Domicilio"/>
+        <mapping class="project1.Cliente"/>
     </session-factory>
 </hibernate-configuration>

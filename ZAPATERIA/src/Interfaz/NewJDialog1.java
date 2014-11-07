@@ -1,16 +1,48 @@
 
 package Interfaz;
 
+import java.awt.event.KeyEvent;
+
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Observable;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
+import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
+
+import project1.Articulo;
+import project1.Categoria;
+import project1.Ciudad;
+import project1.Empresa;
+import project1.Pais;
+import project1.Provincia;
+
 /**
  *
  * @author Adrian
  */
 public class NewJDialog1 extends javax.swing.JDialog {
+    Empresa unaEmpresa;
 
     /** Creates new form NewJDialog1 */
-    public NewJDialog1(java.awt.Frame parent, boolean modal) {
+    public NewJDialog1(java.awt.Frame parent, boolean modal, Empresa unaEmpresa) {
         super(parent, modal);
+        this.unaEmpresa = unaEmpresa;
         initComponents();
+        actualizarCiudad();
+        actualizarPais();
+        actualizarProvincia();
+        CargaTabla(unaEmpresa.getCiudades());
+        AutoCompleteDecorator.decorate(this.cmbPais);
+        AutoCompleteDecorator.decorate(this.cmbProvincia);
+        AutoCompleteDecorator.decorate(this.cmbCiudad);
     }
 
     /** This method is called from within the constructor to
@@ -21,21 +53,260 @@ public class NewJDialog1 extends javax.swing.JDialog {
     @SuppressWarnings("unchecked")
     private void initComponents() {//GEN-BEGIN:initComponents
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        cmbPais = new javax.swing.JComboBox();
+        cmbProvincia = new javax.swing.JComboBox();
+        cmbCiudad = new javax.swing.JComboBox();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        btnCancelarCategoria = new javax.swing.JButton();
+        btnGuardarCerCategoria = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblCiudades = new javax.swing.JTable();
+        jLabel4 = new javax.swing.JLabel();
+        txtCP = new javax.swing.JTextField();
+        lblCriterioBusqueda = new javax.swing.JLabel();
+        cmbCriterioCiudad = new javax.swing.JComboBox();
+        lblBusqueda = new javax.swing.JLabel();
+        txtBusqueda = new javax.swing.JTextField();
+
+        jMenuItem1.setText("jMenuItem1");
+
+        jMenuItem2.setText("jMenuItem2");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        cmbPais.setEditable(true);
+        cmbPais.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Argentina", "Brasil", "Uruguay", "Paraguay", "Argelia" }));
+        cmbPais.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cmbPaisKeyTyped(evt);
+            }
+        });
+
+        cmbProvincia.setEditable(true);
+        cmbProvincia.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Argentina", "Brasil", "Uruguay", "Paraguay", "Argelia" }));
+        cmbProvincia.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cmbProvinciaKeyTyped(evt);
+            }
+        });
+
+        cmbCiudad.setEditable(true);
+        cmbCiudad.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Argentina", "Brasil", "Uruguay", "Paraguay", "Argelia" }));
+        cmbCiudad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cmbCiudadKeyTyped(evt);
+            }
+        });
+
+        jLabel1.setText("Pais");
+
+        jLabel2.setText("Provincia");
+
+        jLabel3.setText("Ciudad");
+
+        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        btnCancelarCategoria.setText("Cancelar");
+        btnCancelarCategoria.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnCancelarCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarCategoriaActionPerformed(evt);
+            }
+        });
+
+        btnGuardarCerCategoria.setText("Guardar");
+        btnGuardarCerCategoria.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnGuardarCerCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarCerCategoriaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnGuardarCerCategoria)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnCancelarCategoria)
+                .addGap(22, 22, 22))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCancelarCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnGuardarCerCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        tblCiudades.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Pais", "Provincia", "Ciudad", "CP"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(tblCiudades);
+        tblCiudades.getColumnModel().getColumn(0).setResizable(false);
+        tblCiudades.getColumnModel().getColumn(0).setHeaderValue("Pais");
+        tblCiudades.getColumnModel().getColumn(1).setResizable(false);
+        tblCiudades.getColumnModel().getColumn(1).setHeaderValue("Provincia");
+        tblCiudades.getColumnModel().getColumn(2).setResizable(false);
+        tblCiudades.getColumnModel().getColumn(2).setHeaderValue("Ciudad");
+        tblCiudades.getColumnModel().getColumn(3).setResizable(false);
+        tblCiudades.getColumnModel().getColumn(3).setHeaderValue("CP");
+
+        jLabel4.setText("CP");
+
+        txtCP.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCPKeyTyped(evt);
+            }
+        });
+
+        lblCriterioBusqueda.setText("Criterio de Busqueda:");
+
+        cmbCriterioCiudad.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Busqueda Inteligente", "Pais", "Provincia", "Ciudad" }));
+
+        lblBusqueda.setText("Busqueda:");
+
+        txtBusqueda.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                txtBusquedaCaretUpdate(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addGap(64, 64, 64)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cmbProvincia, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cmbPais, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cmbCiudad, 0, 83, Short.MAX_VALUE)
+                    .addComponent(txtCP, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 557, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblCriterioBusqueda)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cmbCriterioCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblBusqueda)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblCriterioBusqueda)
+                    .addComponent(lblBusqueda)
+                    .addComponent(txtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbCriterioCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cmbPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))
+                        .addGap(42, 42, 42)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cmbProvincia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(53, 53, 53)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cmbCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
+                        .addGap(60, 60, 60)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(txtCP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 9, Short.MAX_VALUE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }//GEN-END:initComponents
+
+    private void cmbPaisKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbPaisKeyTyped
+
+    }//GEN-LAST:event_cmbPaisKeyTyped
+
+    private void cmbProvinciaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbProvinciaKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbProvinciaKeyTyped
+
+    private void cmbCiudadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbCiudadKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbCiudadKeyTyped
+
+    private void btnCancelarCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarCategoriaActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCancelarCategoriaActionPerformed
+
+    private void btnGuardarCerCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCerCategoriaActionPerformed
+        try {
+            Pais unPais = unaEmpresa.altaPais(cmbPais.getSelectedItem().toString());
+            Provincia unaPro = unaEmpresa.altaProvincia(unPais, cmbProvincia.getSelectedItem().toString());
+            unaEmpresa.altaLocalidad(unPais, unaPro, cmbCiudad.getSelectedItem().toString(), Integer.parseInt(txtCP.getText()));
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+        
+    }//GEN-LAST:event_btnGuardarCerCategoriaActionPerformed
+
+    private void txtBusquedaCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_txtBusquedaCaretUpdate
+        CargaTabla(consultaArticulos(txtBusqueda.getText().toUpperCase()));
+    }//GEN-LAST:event_txtBusquedaCaretUpdate
+
+    private void txtCPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCPKeyTyped
+        char c = evt.getKeyChar();
+        if (((c < '0') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE))
+            evt.consume();
+        if (txtCP.getText().length() > 4)
+            evt.consume();
+    }//GEN-LAST:event_txtCPKeyTyped
 
     /**
      * @param args the command line arguments
@@ -65,7 +336,7 @@ public class NewJDialog1 extends javax.swing.JDialog {
         //</editor-fold>
 
         /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        /*  java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 NewJDialog1 dialog = new NewJDialog1(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
@@ -76,10 +347,92 @@ public class NewJDialog1 extends javax.swing.JDialog {
                 });
                 dialog.setVisible(true);
             }
-        });
+        });*/
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancelarCategoria;
+    private javax.swing.JButton btnGuardarCerCategoria;
+    private javax.swing.JComboBox cmbCiudad;
+    private javax.swing.JComboBox cmbCriterioCiudad;
+    private javax.swing.JComboBox cmbPais;
+    private javax.swing.JComboBox cmbProvincia;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPopupMenu jPopupMenu1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblBusqueda;
+    private javax.swing.JLabel lblCriterioBusqueda;
+    private javax.swing.JTable tblCiudades;
+    private javax.swing.JTextField txtBusqueda;
+    private javax.swing.JTextField txtCP;
     // End of variables declaration//GEN-END:variables
 
+    public void CargaTabla(List ciudades) {
+        DefaultTableModel modelo = (DefaultTableModel) tblCiudades.getModel();
+        int filas = tblCiudades.getRowCount();
+        for (int i = 0; filas > i; i++)
+            modelo.removeRow(0);
+        Collection lista;
+        lista = ciudades;
+        if (!lista.isEmpty()) {
+            for (Object unObj : lista) {
+                Ciudad unaCiu = (Ciudad) unObj;
+                modelo.addRow(new Object[] { unaCiu.getNombre(), unaCiu.getProvinciaPadre().getNombre(), unaCiu.getProvinciaPadre().getUnPais().getNombre() });
+            }
+        }
+    }
+
+
+    public void limpiar() {
+    }
+
+    public void actualizarCiudad() {
+        cmbCiudad.setModel(new javax.swing.DefaultComboBoxModel(unaEmpresa.getCiudades().toArray()));
+    }
+
+    public void actualizarProvincia() {
+        cmbProvincia.setModel(new javax.swing.DefaultComboBoxModel(unaEmpresa.getProvincias().toArray()));
+    }
+
+    public void actualizarPais() {
+        cmbPais.setModel(new javax.swing.DefaultComboBoxModel(unaEmpresa.getPaises().toArray()));
+    }
+
+    /*    @Override
+    public void update(Observable observable, Object object) {
+        actualizarComboMarca();
+        actualizarComboCategoria1();
+        actualizarCategoria2();
+        CargaTabla(unaEmpresa.getArticulos());
+        actualizarLista();
+    }*/
+
+    public List consultaArticulos(String consulta) {
+        int i = cmbCriterioCiudad.getSelectedIndex();
+        List retorno = new LinkedList();
+        Ciudad unaCiu = null;
+        if (consulta.equals(""))
+            return unaEmpresa.getCiudades();
+        for (Object unaCiudad : unaEmpresa.getCiudades().toArray()) {
+            unaCiu = (Ciudad) unaCiudad;
+            if ((i == 0) &&
+                (unaCiu.getNombre().toUpperCase().contains(consulta) || unaCiu.getProvinciaPadre().getNombre().toUpperCase().contains(consulta) ||
+                 unaCiu.getProvinciaPadre().getUnPais().getNombre().toString().toUpperCase().contains(consulta))) {
+                retorno.add(unaCiu.getId(), unaCiu);
+            } else if ((i == 1) && (unaCiu.getProvinciaPadre().getUnPais().getNombre().toUpperCase().contains(consulta))) {
+                retorno.add(unaCiu.getId(), unaCiu);
+            } else if ((i == 2) && (unaCiu.getProvinciaPadre().getNombre().toUpperCase().contains(consulta))) {
+                retorno.add(unaCiu.getId(), unaCiu);
+            } else if ((i == 3) && (unaCiu.getNombre().toString().toUpperCase().contains(consulta))) {
+                retorno.add(unaCiu.getId(), unaCiu);
+            }
+        }
+        return retorno;
+    }
 }

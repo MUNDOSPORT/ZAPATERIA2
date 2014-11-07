@@ -35,5 +35,10 @@
         <mapping class="project1.Venta"/>
         <mapping class="project1.Articulo"/>
         <mapping class="project1.Auditoria"/>
+        <mapping class="project1.Pais"/>
+        <mapping class="project1.Provincia"/>
+        <mapping class="project1.Ciudad"/>
+        <mapping class="project1.Domicilio"/>
+        <mapping class="project1.Cliente"/>
     </session-factory>
 </hibernate-configuration>
