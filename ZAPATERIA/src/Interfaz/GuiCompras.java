@@ -43,6 +43,8 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
     public GuiCompras(Empresa unaEmpresa) {
         this.unaEmpresa = unaEmpresa;
         initComponents();
+        pnlDescuentoArticulo.setVisible(false);
+        pnlDescuentoTotal.setVisible(false);
         actualizarComboProveedor();
         Date fechaActual = new Date();
         GregorianCalendar hoy = new GregorianCalendar();
@@ -95,7 +97,7 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
         pnlDescuentoArticulo = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         cmbDescuentoArticulo = new javax.swing.JComboBox();
-        jTextField2 = new javax.swing.JTextField();
+        txtDescuentoArticulo = new javax.swing.JTextField();
         cbkDescuento = new javax.swing.JCheckBox();
         jPanel3 = new javax.swing.JPanel();
         btnGuardarNueVenta1 = new javax.swing.JButton();
@@ -107,10 +109,11 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
         lblFecha = new javax.swing.JLabel();
         lblTotal = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        pnlDescuentoTotal = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         cmbDescuentoTotal = new javax.swing.JComboBox();
-        jTextField1 = new javax.swing.JTextField();
+        txtDescuentoTotal = new javax.swing.JTextField();
+        cbkDescuentoTotal = new javax.swing.JCheckBox();
 
         MenuModificar.setText("Modificar");
         MenuModificar.setToolTipText("");
@@ -166,35 +169,47 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
 
         lblFechaVenta.setText("Fecha");
 
+        txtDate.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtDateFocusLost(evt);
+            }
+        });
+        txtDate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDateKeyTyped(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblProveedor)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cmbProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnSeleccion, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(btnAgregarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(632, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblFechaVenta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(106, 106, 106))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(lblProveedor)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(cmbProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSeleccion, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(btnAgregarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 632, Short.MAX_VALUE)
+                        .addComponent(lblFechaVenta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblFechaVenta)
                     .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnAgregarProveedor)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,7 +217,7 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblProveedor)
                             .addComponent(cmbProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(21, 21, 21))
+                .addGap(14, 14, 14))
         );
 
         tblVenta.setAutoCreateRowSorter(true);
@@ -281,6 +296,11 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
 
         lblPrecio.setText("precio*");
 
+        txtPrecio.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                txtPrecioCaretUpdate(evt);
+            }
+        });
         txtPrecio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPrecioActionPerformed(evt);
@@ -325,7 +345,7 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
         lblTotal1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel4.setText("Precio C/U");
+        jLabel4.setText("Total Articulo");
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/1412329438_685082-Search-16.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -339,10 +359,20 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
         jLabel5.setText("Tipod de descuento");
 
         cmbDescuentoArticulo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Porcentaje", "Monto" }));
-
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        cmbDescuentoArticulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                cmbDescuentoArticuloActionPerformed(evt);
+            }
+        });
+
+        txtDescuentoArticulo.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                txtDescuentoArticuloCaretUpdate(evt);
+            }
+        });
+        txtDescuentoArticulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDescuentoArticuloActionPerformed(evt);
             }
         });
 
@@ -356,7 +386,7 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cmbDescuentoArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                .addComponent(txtDescuentoArticulo, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
                 .addContainerGap())
         );
         pnlDescuentoArticuloLayout.setVerticalGroup(
@@ -366,7 +396,7 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
                 .addGroup(pnlDescuentoArticuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(cmbDescuentoArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtDescuentoArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -400,7 +430,7 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
                         .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panel1Layout.createSequentialGroup()
                                 .addComponent(txtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 49, Short.MAX_VALUE))
+                                .addGap(0, 62, Short.MAX_VALUE))
                             .addComponent(lblMarca, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(94, 94, 94)))
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -420,41 +450,32 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnCancelar)
                         .addContainerGap())
-                    .addGroup(panel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblTotal1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(lblTotal1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(49, 49, 49))))
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnAgregarArticulo)
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblCodBarra)
-                            .addComponent(txtCodigodeBarra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblPrecio)
-                        .addComponent(cbkDescuento)))
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblTotal1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addGap(36, 36, 36)
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnCancelar)
-                            .addComponent(btnAgregar)))
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panel1Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap()
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(btnAgregarArticulo)
+                                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblCodBarra)
+                                    .addComponent(txtCodigodeBarra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblPrecio)
+                                .addComponent(cbkDescuento)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panel1Layout.createSequentialGroup()
@@ -463,7 +484,16 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
                                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(lblCantidad)
                                     .addComponent(txtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(pnlDescuentoArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(pnlDescuentoArticulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblTotal1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnCancelar)
+                            .addComponent(btnAgregar))))
                 .addContainerGap())
         );
 
@@ -554,40 +584,47 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Total");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Descuento sobre el total", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, new java.awt.Color(0, 0, 0)));
+        pnlDescuentoTotal.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Descuento sobre el total", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, new java.awt.Color(0, 0, 0)));
 
         jLabel2.setText("Tipod de descuento");
 
         cmbDescuentoTotal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Porcentaje", "Monto" }));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtDescuentoTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtDescuentoTotalActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlDescuentoTotalLayout = new javax.swing.GroupLayout(pnlDescuentoTotal);
+        pnlDescuentoTotal.setLayout(pnlDescuentoTotalLayout);
+        pnlDescuentoTotalLayout.setHorizontalGroup(
+            pnlDescuentoTotalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDescuentoTotalLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cmbDescuentoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE))
+                .addComponent(txtDescuentoTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        pnlDescuentoTotalLayout.setVerticalGroup(
+            pnlDescuentoTotalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDescuentoTotalLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnlDescuentoTotalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(cmbDescuentoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtDescuentoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
+
+        cbkDescuentoTotal.setText("Realizar descuento al total");
+        cbkDescuentoTotal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbkDescuentoTotalActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -609,8 +646,11 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(20, 20, 20)
+                                .addComponent(cbkDescuentoTotal)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                                .addComponent(pnlDescuentoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(42, 42, 42)
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(lblTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -624,12 +664,18 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
                 .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pnlDescuentoTotal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cbkDescuentoTotal)
+                        .addGap(33, 33, 33)))
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -773,7 +819,7 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
     }//GEN-LAST:event_MenuEliminarActionPerformed
 
     private void txtCantidadCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_txtCantidadCaretUpdate
-
+        totalArticulo();
     }//GEN-LAST:event_txtCantidadCaretUpdate
 
     private void btnAgregarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProveedorActionPerformed
@@ -792,7 +838,8 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
 
     private void btnSeleccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionActionPerformed
         Proveedor unPro = null;
-        GuiSeleccionProveedor filtro = new GuiSeleccionProveedor(this, true, unaEmpresa, unPro);
+        GuiSeleccionProveedor filtro;
+        filtro = new GuiSeleccionProveedor(this, true, unaEmpresa, unPro);
         filtro.setVisible(true);
         unPro = filtro.getUnPro();
         cmbProveedor.setSelectedItem(unPro);
@@ -822,6 +869,15 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
     }//GEN-LAST:event_txtPrecioKeyTyped
 
     private void txtPrecioFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPrecioFocusLost
+        if (cbkDescuento.isSelected()) {
+            double desc;
+            if (cmbDescuentoArticulo.getSelectedIndex() == 0) {
+                desc = Double.parseDouble(txtPrecio.getText()) - ((Double.parseDouble(txtPrecio.getText()) / 100) * Double.parseDouble(txtDescuentoArticulo.getText()));
+            } else {
+                desc = Double.parseDouble(txtPrecio.getText()) - Double.parseDouble(txtDescuentoArticulo.getText());
+            }
+            lblTotal1.setText(String.valueOf(desc));
+        }
         //lblTotal1.setText(String.valueOf(Double.parseDouble(txtPrecio.getText()) - Double.parseDouble(txtMonto1.getText())));
     }//GEN-LAST:event_txtPrecioFocusLost
 
@@ -829,21 +885,41 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPrecioActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtDescuentoTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescuentoTotalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtDescuentoTotalActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtDescuentoArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescuentoArticuloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtDescuentoArticuloActionPerformed
 
     private void cbkDescuentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbkDescuentoActionPerformed
-        if (cbkDescuento.isSelected()){
+        if (cbkDescuento.isSelected()) {
             pnlDescuentoArticulo.setVisible(true);
-        }else{
+        } else {
             pnlDescuentoArticulo.setVisible(false);
         }
     }//GEN-LAST:event_cbkDescuentoActionPerformed
+
+    private void txtPrecioCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_txtPrecioCaretUpdate
+        totalArticulo();
+    }//GEN-LAST:event_txtPrecioCaretUpdate
+
+    private void txtDescuentoArticuloCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_txtDescuentoArticuloCaretUpdate
+        totalArticulo();
+    }//GEN-LAST:event_txtDescuentoArticuloCaretUpdate
+
+    private void cmbDescuentoArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbDescuentoArticuloActionPerformed
+        totalArticulo();
+    }//GEN-LAST:event_cmbDescuentoArticuloActionPerformed
+
+    private void cbkDescuentoTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbkDescuentoTotalActionPerformed
+    if (cbkDescuentoTotal.isSelected()) {
+        pnlDescuentoTotal.setVisible(true);
+    } else {
+        pnlDescuentoTotal.setVisible(false);
+    }
+    }//GEN-LAST:event_cbkDescuentoTotalActionPerformed
     /**
      * @param args the command line arguments
      */
@@ -890,11 +966,11 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
     private javax.swing.JButton btnGuardarNueVenta1;
     private javax.swing.JButton btnSeleccion;
     private javax.swing.JCheckBox cbkDescuento;
+    private javax.swing.JCheckBox cbkDescuentoTotal;
     private javax.swing.JComboBox cmbDescuentoArticulo;
     private javax.swing.JComboBox cmbDescuentoTotal;
     private javax.swing.JComboBox cmbProveedor;
     private javax.swing.JButton jButton1;
-    private com.toedter.calendar.JDateChooser txtDate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -902,14 +978,11 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel lblCantidad;
     private javax.swing.JLabel lblCodBarra;
     private javax.swing.JLabel lblFecha;
@@ -923,9 +996,13 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
     private javax.swing.JLabel lblUsuarioActual1;
     private javax.swing.JPanel panel1;
     private javax.swing.JPanel pnlDescuentoArticulo;
+    private javax.swing.JPanel pnlDescuentoTotal;
     private javax.swing.JTable tblVenta;
     private javax.swing.JTextField txtCantidad;
     private javax.swing.JTextField txtCodigodeBarra;
+    private com.toedter.calendar.JDateChooser txtDate;
+    private javax.swing.JTextField txtDescuentoArticulo;
+    private javax.swing.JTextField txtDescuentoTotal;
     private javax.swing.JTextField txtPrecio;
     // End of variables declaration//GEN-END:variables
    
@@ -1028,8 +1105,8 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
                     txtCantidad.setText("");
                     stock = unArt.getStock();
                     jButton1.setEnabled(false);
-                   // txtMonto1.setText("0.0");
-                   // lblTotal1.setText(String.valueOf(Double.parseDouble(txtPrecio.getText()) - Double.parseDouble(txtMonto1.getText())));
+                    //txtMonto1.setText("0.0");
+                    //lblTotal1.setText(String.valueOf(Double.parseDouble(txtPrecio.getText()) - Double.parseDouble(txtMonto1.getText())));
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "no existe articulo.");
@@ -1038,6 +1115,23 @@ public class GuiCompras extends javax.swing.JFrame implements Observer {
                 lblMarca.setText("");
                 btnAgregar.setEnabled(false);
             }
+        }
+    }
+    
+    public void totalArticulo(){
+        if (txtCantidad.getText().equals("") && txtPrecio.getText().equals("") && txtDescuentoArticulo.getText().equals("")){
+            if (cbkDescuento.isSelected()) {
+                double desc;
+                if (cmbDescuentoArticulo.getSelectedIndex() == 0) {
+                    desc = Double.parseDouble(txtPrecio.getText()) - ((Double.parseDouble(txtPrecio.getText()) / 100) * Double.parseDouble(txtDescuentoArticulo.getText()));
+                } else {
+                    desc = Double.parseDouble(txtPrecio.getText()) - Double.parseDouble(txtDescuentoArticulo.getText());
+                }
+                lblTotal.setText(String.valueOf(desc * Double.parseDouble(txtCantidad.getText())));
+            }else{
+                lblTotal.setText(String.valueOf(Double.parseDouble(txtPrecio.getText()) * Double.parseDouble(txtCantidad.getText())));
+            }
+            
         }
     }
 }
