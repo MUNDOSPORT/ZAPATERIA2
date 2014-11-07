@@ -190,7 +190,7 @@ public class Empresa extends Observable {
         this.direccion = direccion;
         this.telefono = telefono;
         this.email = email;
-        this.foto = toArrayByte("C:\\Users\\Adrian\\Downloads\\fotos.jpg");
+        this.foto = toArrayByte("C:\\fotos.jpg");
         this.getPersistencia().insert(this);
     }
 
