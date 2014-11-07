@@ -52,9 +52,7 @@ public class Persistencia {
     public Empresa load(String idEmpresa) throws HibernateException {
         Empresa unaEmpresa = null;
         unaEmpresa = (Empresa) session.createQuery("SELECT FROM Empresa").uniqueResult();
-
         return unaEmpresa;
-
     }
 
     public List find(String sentencia) {
@@ -73,7 +71,7 @@ public class Persistencia {
         try {
             String login = "postgres";
             String password = "1234";
-            String url = "jdbc:postgresql://localhost:5432/ZAPATERIA";
+            String url = "jdbc:postgresql://localhost:5432/postgres";
             Class.forName("org.postgresql.Driver").newInstance();
             conn = DriverManager.getConnection(url, login, password);
             stmt = conn.createStatement();
