@@ -96,10 +96,7 @@ public class Pais {
         }
     }
 
-    public Ciudad altaLocalidad(Provincia unaProvincia, String nombreLocalidad, int CP) throws Exception {
-        Ciudad unaCiudad = unaProvincia.altaCiudad(nombreLocalidad, CP);
-        return unaCiudad;
-    }
+
 
     public Ciudad modificarLocalidad(Provincia unaProvincia, Ciudad unaCiudad, String nombreCiudad) throws Exception {
         return unaProvincia.modificarCiudad(unaCiudad, nombreCiudad);
@@ -129,5 +126,10 @@ public class Pais {
         }
         return devolver;
 
+    }
+
+    @Override
+    public String toString() {
+        return this.getNombre();
     }
 }

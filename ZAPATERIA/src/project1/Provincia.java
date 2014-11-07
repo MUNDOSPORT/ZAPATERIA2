@@ -67,19 +67,6 @@ public class Provincia {
         this.nombre = nombre;
     }
 
-    public Ciudad altaCiudad(String nombreCiudad, int CP) throws Exception {
-        if (obtenerCiudad(nombreCiudad) != null) {
-            throw new Exception("La Localidad: " + nombreCiudad + " ya existe");
-        } else {
-            Ciudad unDomicilio = new Ciudad(nombreCiudad, this, CP);
-            this.ciudades.add(unDomicilio);
-            Empresa.persistencia.update(this);
-            return unDomicilio;
-        }
-
-
-    }
-
     public void bajaCiudad(Ciudad unaCiudad) throws Exception {
         if (existeCiudad(unaCiudad)) {
             this.ciudades.remove(unaCiudad);
@@ -122,5 +109,10 @@ public class Provincia {
             }
         }
         return existe;
+    }
+
+    @Override
+    public String toString() {
+        return this.getNombre();
     }
 }

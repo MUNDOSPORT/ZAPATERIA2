@@ -12,27 +12,37 @@ public class Ciudad {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private int CP;
-    @ManyToOne
-    private Provincia provinciaPadre;
+    private String Pais;
+    private String provincia;
     private String nombre;
 
     public Ciudad() {
     }
 
-    public Ciudad(String nombre, Provincia padre, int CP) throws Exception {
+    public Ciudad(String nombre, String provincia, String pais, int CP) throws Exception {
         this.id = 0;
         this.CP = CP;
-        this.provinciaPadre = padre;
+        this.provincia = provincia;
+        this.Pais = pais;
         this.nombre = nombre;
         Empresa.persistencia.insert(this);
     }
 
-    public Provincia getProvinciaPadre() {
-        return provinciaPadre;
+
+    public void setPais(String Pais) {
+        this.Pais = Pais;
     }
 
-    public void setProvinciaPadre(Provincia provinciaPadre) {
-        this.provinciaPadre = provinciaPadre;
+    public String getPais() {
+        return Pais;
+    }
+
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
+    }
+
+    public String getProvincia() {
+        return provincia;
     }
 
     public Integer getId() {
@@ -58,4 +68,5 @@ public class Ciudad {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
 }

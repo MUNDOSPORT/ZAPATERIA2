@@ -1,6 +1,9 @@
 
 package Interfaz;
 
+import ca.odell.glazedlists.GlazedLists;
+import ca.odell.glazedlists.swing.AutoCompleteSupport;
+
 import java.awt.event.KeyEvent;
 
 import java.util.Calendar;
@@ -14,8 +17,6 @@ import java.util.Observable;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-
-import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 
 import project1.Articulo;
 import project1.Categoria;
@@ -40,9 +41,9 @@ public class NewJDialog1 extends javax.swing.JDialog {
         actualizarPais();
         actualizarProvincia();
         CargaTabla(unaEmpresa.getCiudades());
-        AutoCompleteDecorator.decorate(this.cmbPais);
-        AutoCompleteDecorator.decorate(this.cmbProvincia);
-        AutoCompleteDecorator.decorate(this.cmbCiudad);
+        AutoCompleteSupport support = AutoCompleteSupport.install(this.cmbCiudad, GlazedLists.eventListOf());
+        //AutoCompleteDecorator.decorate(this.cmbProvincia);
+        // AutoCompleteDecorator.decorate(this.cmbCiudad);
     }
 
     /** This method is called from within the constructor to
@@ -287,9 +288,8 @@ public class NewJDialog1 extends javax.swing.JDialog {
 
     private void btnGuardarCerCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCerCategoriaActionPerformed
         try {
-            Pais unPais = unaEmpresa.altaPais(cmbPais.getSelectedItem().toString());
-            Provincia unaPro = unaEmpresa.altaProvincia(unPais, cmbProvincia.getSelectedItem().toString());
-            unaEmpresa.altaLocalidad(unPais, unaPro, cmbCiudad.getSelectedItem().toString(), Integer.parseInt(txtCP.getText()));
+            unaEmpresa.altaLocalidad(cmbPais.getSelectedItem().toString(), cmbProvincia.getSelectedItem().toString(), cmbCiudad.getSelectedItem().toString(),
+                                     Integer.parseInt(txtCP.getText()));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
@@ -383,7 +383,7 @@ public class NewJDialog1 extends javax.swing.JDialog {
         if (!lista.isEmpty()) {
             for (Object unObj : lista) {
                 Ciudad unaCiu = (Ciudad) unObj;
-                modelo.addRow(new Object[] { unaCiu.getNombre(), unaCiu.getProvinciaPadre().getNombre(), unaCiu.getProvinciaPadre().getUnPais().getNombre() });
+                modelo.addRow(new Object[] { unaCiu.getNombre(), unaCiu.getProvincia(), unaCiu.getPais() });
             }
         }
     }
@@ -397,11 +397,35 @@ public class NewJDialog1 extends javax.swing.JDialog {
     }
 
     public void actualizarProvincia() {
-        cmbProvincia.setModel(new javax.swing.DefaultComboBoxModel(unaEmpresa.getProvincias().toArray()));
+        for (Object unObj : unaEmpresa.getCiudades().toArray()) {
+            Ciudad unaCiu = (Ciudad) unObj;
+            boolean exists = false;
+            for (int index = 0; index < cmbProvincia.getItemCount() && !exists; index++) {
+                if (unaCiu.getProvincia().equals(cmbProvincia.getItemAt(index))) {
+                    exists = true;
+                }
+            }
+            if (!exists) {
+                cmbProvincia.addItem(unaCiu.getProvincia());
+            }
+        }
     }
 
     public void actualizarPais() {
-        cmbPais.setModel(new javax.swing.DefaultComboBoxModel(unaEmpresa.getPaises().toArray()));
+        for (Object unObj : unaEmpresa.getCiudades().toArray()) {
+            Ciudad unaCiu = (Ciudad) unObj;
+            boolean exists = false;
+            for (int index = 0; index < cmbPais.getItemCount() && !exists; index++) {
+                if (cmbPais.getItemCount() < 0)
+                    cmbPais.addItem(unaCiu.getProvincia());
+                if (unaCiu.getPais().equals(cmbPais.getItemAt(index))) {
+                    exists = true;
+                }
+            }
+            if (!exists) {
+                cmbPais.addItem(unaCiu.getProvincia());
+            }
+        }
     }
 
     /*    @Override
@@ -422,12 +446,12 @@ public class NewJDialog1 extends javax.swing.JDialog {
         for (Object unaCiudad : unaEmpresa.getCiudades().toArray()) {
             unaCiu = (Ciudad) unaCiudad;
             if ((i == 0) &&
-                (unaCiu.getNombre().toUpperCase().contains(consulta) || unaCiu.getProvinciaPadre().getNombre().toUpperCase().contains(consulta) ||
-                 unaCiu.getProvinciaPadre().getUnPais().getNombre().toString().toUpperCase().contains(consulta))) {
+                (unaCiu.getNombre().toUpperCase().contains(consulta) || unaCiu.getProvincia().toUpperCase().contains(consulta) ||
+                 unaCiu.getPais().toString().toUpperCase().contains(consulta))) {
                 retorno.add(unaCiu.getId(), unaCiu);
-            } else if ((i == 1) && (unaCiu.getProvinciaPadre().getUnPais().getNombre().toUpperCase().contains(consulta))) {
+            } else if ((i == 1) && (unaCiu.getPais().toUpperCase().contains(consulta))) {
                 retorno.add(unaCiu.getId(), unaCiu);
-            } else if ((i == 2) && (unaCiu.getProvinciaPadre().getNombre().toUpperCase().contains(consulta))) {
+            } else if ((i == 2) && (unaCiu.getProvincia().toUpperCase().contains(consulta))) {
                 retorno.add(unaCiu.getId(), unaCiu);
             } else if ((i == 3) && (unaCiu.getNombre().toString().toUpperCase().contains(consulta))) {
                 retorno.add(unaCiu.getId(), unaCiu);

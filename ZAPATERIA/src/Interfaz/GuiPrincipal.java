@@ -205,6 +205,7 @@ public class GuiPrincipal extends javax.swing.JFrame implements Observer {
         tbpParamentros = new javax.swing.JPanel();
         btnRoles1 = new javax.swing.JButton();
         btnEmpresa = new javax.swing.JButton();
+        btnCiudades = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         tbpAuditoria = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -1462,6 +1463,19 @@ public class GuiPrincipal extends javax.swing.JFrame implements Observer {
             }
         });
 
+        btnCiudades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/1415406468_Globe.png"))); // NOI18N
+        btnCiudades.setText("<html>Gestion<br /> de Ciudades\n<html>");
+        btnCiudades.setDefaultCapable(false);
+        btnCiudades.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCiudades.setIconTextGap(-1);
+        btnCiudades.setVerifyInputWhenFocusTarget(false);
+        btnCiudades.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnCiudades.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCiudadesActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout tbpParamentrosLayout = new javax.swing.GroupLayout(tbpParamentros);
         tbpParamentros.setLayout(tbpParamentrosLayout);
         tbpParamentrosLayout.setHorizontalGroup(
@@ -1469,18 +1483,21 @@ public class GuiPrincipal extends javax.swing.JFrame implements Observer {
             .addGroup(tbpParamentrosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnRoles1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79)
+                .addGap(80, 80, 80)
                 .addComponent(btnEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1031, Short.MAX_VALUE))
+                .addGap(80, 80, 80)
+                .addComponent(btnCiudades, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(863, Short.MAX_VALUE))
         );
         tbpParamentrosLayout.setVerticalGroup(
             tbpParamentrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tbpParamentrosLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(tbpParamentrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(30, 30, 30)
+                .addGroup(tbpParamentrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnCiudades, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRoles1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(533, Short.MAX_VALUE))
+                .addContainerGap(525, Short.MAX_VALUE))
         );
 
         tbpPrincipal.addTab("Parametros", tbpParamentros);
@@ -1903,7 +1920,7 @@ public class GuiPrincipal extends javax.swing.JFrame implements Observer {
     }//GEN-LAST:event_btnRolesActionPerformed
 
     private void btnRoles1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRoles1ActionPerformed
-        GuiTiposPagos vTP = new GuiTiposPagos(new javax.swing.JDialog(),true,unaEmpresa);
+        GuiTiposPagos vTP = new GuiTiposPagos(new javax.swing.JDialog(), true, unaEmpresa);
         vTP.setVisible(true);
     }//GEN-LAST:event_btnRoles1ActionPerformed
 
@@ -2127,13 +2144,13 @@ public class GuiPrincipal extends javax.swing.JFrame implements Observer {
         } else {
             JOptionPane.showMessageDialog(null, "No existen datos que concuerden con el criterio de busqueda.");
         }
-    }//GEN-LAST:event_btnAceptar1ActionPerformed
+    } //GEN-LAST:event_btnAceptar1ActionPerformed
 
     private void btn_ver1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ver1ActionPerformed
-    if (cmbCV.getSelectedIndex() == 0)
-                filtroVenta();
-            else
-                filtroCompra();
+        if (cmbCV.getSelectedIndex() == 0)
+            filtroVenta();
+        else
+            filtroCompra();
     }//GEN-LAST:event_btn_ver1ActionPerformed
 
     private void btnAceptar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptar2ActionPerformed
@@ -2141,15 +2158,15 @@ public class GuiPrincipal extends javax.swing.JFrame implements Observer {
     }//GEN-LAST:event_btnAceptar2ActionPerformed
 
     private void cbx_filtro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbx_filtro1ActionPerformed
-    int filtro = cbx_filtro1.getSelectedIndex();
-    if (filtro == 0) {
-        calDesde.setEnabled(true);
-        calHasta.setEnabled(false);
+        int filtro = cbx_filtro1.getSelectedIndex();
+        if (filtro == 0) {
+            calDesde.setEnabled(true);
+            calHasta.setEnabled(false);
 
-    } else {
-        calDesde.setEnabled(true);
-        calHasta.setEnabled(true);
-    }
+        } else {
+            calDesde.setEnabled(true);
+            calHasta.setEnabled(true);
+        }
     }//GEN-LAST:event_cbx_filtro1ActionPerformed
 
     private void btnFacturaComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFacturaComprasActionPerformed
@@ -2233,7 +2250,12 @@ public class GuiPrincipal extends javax.swing.JFrame implements Observer {
             ver_Informe_Compra(Integer.parseInt(tblCompras.getValueAt(tblCompras.getSelectedRow(), 0).toString()));
         }
     }//GEN-LAST:event_tblComprasMouseClicked
-  /**
+
+    private void btnCiudadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCiudadesActionPerformed
+        NewJDialog1 ciudad = new NewJDialog1(this, true, unaEmpresa);
+        ciudad.setVisible(true);
+    }//GEN-LAST:event_btnCiudadesActionPerformed
+    /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -2281,6 +2303,7 @@ public class GuiPrincipal extends javax.swing.JFrame implements Observer {
     private javax.swing.JButton btnArticulo1;
     private javax.swing.JButton btnCategoria;
     private javax.swing.JButton btnCierreCaja;
+    private javax.swing.JButton btnCiudades;
     private javax.swing.JButton btnComision;
     private javax.swing.JButton btnEmpleados;
     private javax.swing.JButton btnEmpresa;
@@ -2555,7 +2578,7 @@ public class GuiPrincipal extends javax.swing.JFrame implements Observer {
         int i = cmbCriterioProveedor.getSelectedIndex();
         Map retorno = new HashMap();
         Proveedor aux = null;
-        if(consulta.equals(""))
+        if (consulta.equals(""))
             return unaEmpresa.getProveedores();
         for (Object unProveedor : unaEmpresa.getProveedores().values().toArray()) {
             aux = (Proveedor) unProveedor;
@@ -2581,7 +2604,7 @@ public class GuiPrincipal extends javax.swing.JFrame implements Observer {
         int i = cmbCriterioEntrada.getSelectedIndex();
         Map retorno = new HashMap();
         Compra aux = null;
-        if(consulta.equals(""))
+        if (consulta.equals(""))
             return unaEmpresa.getCompras();
         for (Object unaCompra : unaEmpresa.getCompras().values().toArray()) {
             aux = (Compra) unaCompra;
@@ -2603,7 +2626,7 @@ public class GuiPrincipal extends javax.swing.JFrame implements Observer {
         int i = cmbCriterioVenta.getSelectedIndex();
         Map retorno = new HashMap();
         Venta aux = null;
-        if(consulta.equals(""))
+        if (consulta.equals(""))
             return consultaDiaVenta();
         for (Object unaVenta : unaEmpresa.getVentas().values().toArray()) {
             aux = (Venta) unaVenta;
@@ -2629,7 +2652,7 @@ public class GuiPrincipal extends javax.swing.JFrame implements Observer {
         int i = cmbCriterioArticulo.getSelectedIndex();
         Map retorno = new HashMap();
         Articulo aux = null;
-        if(consulta.equals(""))
+        if (consulta.equals(""))
             return unaEmpresa.getArticulos();
         for (Object unArt : unaEmpresa.getArticulos().values().toArray()) {
             aux = (Articulo) unArt;
@@ -2659,7 +2682,7 @@ public class GuiPrincipal extends javax.swing.JFrame implements Observer {
         int i = cmbCriteriEmpleado.getSelectedIndex();
         Map retorno = new HashMap();
         Empleado aux = null;
-        if(consulta.equals(""))
+        if (consulta.equals(""))
             return unaEmpresa.getEmpleados();
         for (Object unEmp : unaEmpresa.getEmpleados().values().toArray()) {
             aux = (Empleado) unEmp;

@@ -11,21 +11,12 @@ public class Domicilio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     @OneToOne
-    private Pais pais;
-
-    @OneToOne
-    private Provincia provincia;
-    @OneToOne
-
     private Ciudad unaCiudad;
     private String domicilio;
 
-    public Domicilio(Pais pais, Provincia provincia, Ciudad localidad, String domicilio) throws Exception {
+    public Domicilio(Ciudad localidad, String domicilio) throws Exception {
         this.id = 0;
-        this.pais = pais;
-        this.provincia = provincia;
         this.unaCiudad = localidad;
         this.domicilio = domicilio;
         Empresa.persistencia.insert(this);
@@ -59,19 +50,8 @@ public class Domicilio {
         return unaCiudad;
     }
 
-    public Pais getPais() {
-        return pais;
-    }
-
-    public void setPais(Pais pais) {
-        this.pais = pais;
-    }
-
-    public Provincia getProvincia() {
-        return provincia;
-    }
-
-    public void setProvincia(Provincia provincia) {
-        this.provincia = provincia;
+    @Override
+    public String toString() {
+        return this.getDomicilio();
     }
 }
